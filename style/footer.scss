@@ -1,0 +1,122 @@
+.footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 90px;
+  height: 450px;
+  padding: 107px 130px 104px;
+  margin: 0 20px;
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+  color: white;
+
+  h4 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+  p {
+    color: white;
+    font-weight: 300;
+  }
+
+  &-info {
+    max-width: 385px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    & p:nth-child(2) {
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+
+    & h5 {
+      font-size: 20px;
+      line-height: 60px;
+      font-weight: 700;
+    }
+
+    &_nav {
+      width: 140px;
+      height: 190px;
+
+      & li {
+        list-style: none;
+      }
+
+      & a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 38px;
+        font-weight: 300;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: black;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &_title {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      cursor: pointer;
+
+      &--img {
+        position: relative;
+
+        &::before {
+          content: "T";
+          color: $primary-color;
+          font-size: 25px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+        }
+      }
+    }
+  }
+  @include maxw(1023px) {
+    flex-flow: column wrap;
+    align-items: flex-start;
+    gap: 30px;
+    height: auto;
+    padding: 70px 90px 70px;
+  }
+
+  @include maxw(767px) {
+    &-info {
+      align-items: stretch;
+      max-height: fit-content;
+      ul {
+        height: fit-content;
+      }
+    }
+    h4 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    a {
+      font-size: 15px;
+    }
+  }
+
+  @include maxw(419px) {
+    padding: 40px 60px 40px;
+  }
+}

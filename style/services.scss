@@ -1,0 +1,224 @@
+.services {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 220px;
+
+  &-desc {
+    margin: 0 90px;
+    margin-top: 40px;
+  }
+
+  &-title {
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 56px;
+    position: relative;
+  }
+
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    margin-top: 80px;
+  }
+
+  &-item {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 20px;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 54px 37px 47px;
+    box-shadow: 10px 40px 50px rgba(229, 233, 246, $alpha: 0.4);
+
+    & h3 {
+      font-size: 24px;
+      line-height: 56px;
+    }
+    & h3:nth-child(5) {
+      margin-top: 10px;
+    }
+
+    & p {
+      max-width: 350px;
+      padding-right: 20px;
+      height: 85px;
+    }
+    & img {
+      height: 95px;
+      margin-bottom: 10px;
+    }
+  }
+  &-btn {
+    border: solid 1px $primary-color;
+    color: $primary-color;
+    margin-top: 70px;
+  }
+
+  @include maxw(767px) {
+    margin-bottom: 100px;
+    & h2 {
+      font-size: 25px;
+    }
+
+    & h3 {
+      line-height: 40px;
+    }
+    & p {
+      font-size: 15px;
+    }
+    &-main {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      margin-top: 50px;
+    }
+    &-item {
+      padding: 44px 27px 37px;
+    }
+    &-btn {
+      margin-top: 40px;
+    }
+  }
+
+  @include maxw(419px) {
+    &-desc {
+      margin: 20px 20px;
+    }
+
+    &-main {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+      margin-top: 0;
+    }
+
+    &-item {
+      text-align: center;
+      padding: 20px 20px;
+      align-items: center;
+
+      & p {
+        padding-right: 0;
+      }
+    }
+
+    a {
+      margin-top: 20px;
+    }
+  }
+}
+//  service banner
+
+.banners {
+  &-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    margin-bottom: 220px;
+
+    &:nth-child(1) {
+      margin-bottom: 220px;
+    }
+
+    &_desc {
+      max-width: 450px;
+      width: 100%;
+    }
+  }
+
+  &-main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    & h2 {
+      margin-bottom: 40px;
+      font-size: 36px;
+      line-height: 48px;
+    }
+  }
+
+  & img:nth-child(1) {
+    transform: translateX(-60px);
+  }
+  & img:nth-child(2) {
+    transform: translateX(60px);
+  }
+
+  & img {
+    max-width: 55%;
+  }
+
+  @include maxw(1023px) {
+    & img {
+      max-width: 55%;
+    }
+  }
+
+  @include maxw(767px) {
+    gap: 30px;
+
+    & img:nth-child(1) {
+      transform: translateX(0);
+    }
+    & img:nth-child(2) {
+      transform: translateX(0);
+    }
+
+    &-main {
+      h2 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+
+    &-item {
+      margin-bottom: 100px;
+      img {
+        max-width: 50%;
+        transform: translateX(0);
+      }
+
+      &:nth-child(1) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  @include maxw(419px) {
+    & img:nth-child(1),
+    img:nth-child(2) {
+      transform: none;
+    }
+
+    &-main {
+      align-items: center;
+      flex-flow: column wrap;
+      text-align: center;
+
+      & div::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &-item {
+      align-items: center;
+      justify-content: center;
+      flex-flow: row wrap;
+
+      & img {
+        max-width: 100%;
+      }
+    }
+  }
+}

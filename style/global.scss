@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  max-width: 1260px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  line-height: 1;
+}
+
+@mixin maxw($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}

@@ -1,0 +1,79 @@
+$text-color: #7d7987;
+$title-color: #000000;
+$primary-color: #458ff6;
+
+.title {
+  font-size: 36px;
+  color: $title-color;
+}
+
+.hero-title {
+  font-size: 48px;
+  color: $title-color;
+  line-height: 56px;
+}
+
+.ar-title {
+  font-size: 21px;
+  color: black;
+  line-height: 32px;
+}
+
+.desc {
+  font-size: 16px;
+  color: $text-color;
+  line-height: 28px;
+}
+.desc-banner {
+  font-size: 18px;
+  color: $text-color;
+  line-height: 30px;
+}
+
+.btn {
+  padding: 10px 65px;
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none;
+  color: $text-color;
+  transition: 0.2s;
+  border-radius: 55px;
+  border: solid 1px $primary-color;
+  color: $primary-color;
+  cursor: pointer;
+
+  @include maxw(767px) {
+    padding: 10px 40px;
+  }
+
+  @include maxw(500px) {
+    padding: 10px 25px;
+  }
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 56px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 56px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-center {
+    text-align: center;
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
